@@ -4,9 +4,9 @@ import {useLocalStorageState} from '../utils.js';
 const ListContext = React.createContext();
 
 export function ListProvider({children}) {
-  const [doList, setDoList] = useLocalStorageState('do-list', ['do']);
-  const [doingList, setDoingList] = useLocalStorageState('doing-list', ['doing']);
-  const [doneList, setDoneList] = useLocalStorageState('done-list', ['done']);
+  const [doList, setDoList] = useLocalStorageState('do-list', []);
+  const [doingList, setDoingList] = useLocalStorageState('doing-list', []);
+  const [doneList, setDoneList] = useLocalStorageState('done-list', []);
   const [currentEditTask, setCurrentEditTask] = useState('');
 
   const value = {doList, doingList, doneList, setDoList, setDoingList, setDoneList, currentEditTask, setCurrentEditTask};
